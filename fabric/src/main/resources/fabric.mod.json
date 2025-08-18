@@ -1,0 +1,32 @@
+{
+    "schemaVersion": 1,
+    "id": "serverhelper",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+    },
+    "license": "${license}",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+          "net.crypticverse.serverhelper.fabric.ServerHelperFabric"
+        ]
+    },
+    "mixins": [
+      "serverhelper.mixins.json",
+      "serverhelper.fabric.mixins.json"
+    ],
+    "accessWidener": "serverhelper.accesswidener",
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "minecraft": "~${minecraft_version}",
+        "java": ">=${java_version}"
+    }
+}
+  

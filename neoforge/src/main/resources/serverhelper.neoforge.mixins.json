@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.crypticverse.serverhelper.neoforge.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ConfigFolderMixin"
+  ],
+  "client": [
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
