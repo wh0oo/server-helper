@@ -1,5 +1,6 @@
 name: Build
 on: [push, pull_request, merge_group]
+
 jobs:
   build:
     strategy:
@@ -15,4 +16,9 @@ jobs:
         with:
           fetch-depth: 0
       - uses: gradle/actions/wrapper-validation@v4
-      - run: ./gradlew check build --stacktrace
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew check build --stacktrace
